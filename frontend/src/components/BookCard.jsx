@@ -32,7 +32,7 @@ const BookCard = ({ book }) => {
       await axios.delete(
         `https://book-backend-4pyj.onrender.com/api/books/${book._id}`
       );
-      window.location.href("https://book-frontend-rppz.onrender.com/");
+      window.location.reload();
       handleClose();
     } catch (error) {
       console.error("Error deleting book:", error);

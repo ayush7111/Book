@@ -125,7 +125,7 @@ export default function NavBar() {
         <Divider />
         <List>
           {[
-            { linkText: "Home", href: "/home" },
+            { linkText: "Home", href: "/" },
             { linkText: "Add Book", href: "/add" },
           ].map((text, index) => (
             <ListItem key={text.linkText} disablePadding>

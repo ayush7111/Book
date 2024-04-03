@@ -8,7 +8,6 @@ function App() {
       <Routes>
         <Route path="/" element={<NavBar />}>
           <Route index element={<Home />} />
-          <Route path="home" element={<Home />} />
           <Route path="add" element={<BookForm />} />
           <Route path="update/:id" element={<BookForm />} />
         </Route>
