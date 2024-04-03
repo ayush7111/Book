@@ -6,9 +6,26 @@ const cors = require("cors");
 const app = express();
 const PORT = process.env.PORT || 5000;
 Db();
+
 // Middleware
 app.use(express.json());
-app.use(cors());
+
+// CORS Configuration
+const allowedOrigins = [
+  "https://book-frontend-rppz.onrender.com/",
+  "http://localhost:5173",
+]; // Add your frontend domain here
+const corsOptions = {
+  origin: function (origin, callback) {
+    if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+};
+app.use(cors(corsOptions));
+
 // Routes
 app.use("/api/books", bookRoute);
 
