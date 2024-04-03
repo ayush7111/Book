@@ -15,13 +15,16 @@ const Home = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(  "https://book-backend-4pyj.onrender.com/api/books", {
-          params: {
-            page: currentPage,
-            limit: ITEMS_PER_PAGE,
-            searchTerm: searchTerm,
-          },
-        });
+        const response = await axios.get(
+          "https://book-backend-4pyj.onrender.com/api/books",
+          {
+            params: {
+              page: currentPage,
+              limit: ITEMS_PER_PAGE,
+              searchTerm: searchTerm,
+            },
+          }
+        );
         setBooks(response.data.books);
         setTotalBooks(response.data.totalCount);
       } catch (error) {

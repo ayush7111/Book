@@ -73,7 +73,7 @@ const BookForm = () => {
       }
 
       // Redirect to the homepage after successful submission
-      navigate("/home");
+      navigate("/");
     } catch (error) {
       console.error("Error:", error);
     }
