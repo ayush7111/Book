@@ -23,13 +23,15 @@ const BookCard = ({ book }) => {
   };
 
   const handleEdit = () => {
-    navigate(`https://book-backend-4pyj.onrender.com/update/${book._id}`);
+    navigate(`/update/${book._id}`);
     handleClose();
   };
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`/api/books/${book._id}`);
+      await axios.delete(
+        `https://book-backend-4pyj.onrender.com/api/books/${book._id}`
+      );
       window.location.reload();
       handleClose();
     } catch (error) {
