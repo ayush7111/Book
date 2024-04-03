@@ -10,21 +10,7 @@ Db();
 // Middleware
 app.use(express.json());
 
-// CORS Configuration
-const allowedOrigins = [
-  "https://book-frontend-rppz.onrender.com/",
-  "http://localhost:5173",
-]; // Add your frontend domain here
-const corsOptions = {
-  origin: function (origin, callback) {
-    if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
-      callback(null, true);
-    } else {
-      callback(new Error("Not allowed by CORS"));
-    }
-  },
-};
-app.use(cors(corsOptions));
+app.use(cors());
 
 // Routes
 app.use("/api/books", bookRoute);
