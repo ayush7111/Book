@@ -18,7 +18,7 @@ const BookForm = () => {
     if (id) {
       // Fetch book data for editing
       axios
-        .get(`/api/books/${id}`)
+        .get(`https://book-backend-4pyj.onrender.com/api/books/${id}`)
         .then((response) => {
           const { data } = response;
           setTitle(data.title);
