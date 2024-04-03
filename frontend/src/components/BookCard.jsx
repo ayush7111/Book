@@ -23,7 +23,7 @@ const BookCard = ({ book }) => {
   };
 
   const handleEdit = () => {
-    navigate(`/update/${book._id}`);
+    navigate(`https://book-backend-4pyj.onrender.com/update/${book._id}`);
     handleClose();
   };
 

@@ -51,17 +51,25 @@ const BookForm = () => {
       formData.append("image", image);
 
       if (id) {
-        await axios.put(`/api/books/${id}`, formData, {
-          headers: {
-            "Content-Type": "multipart/form-data",
-          },
-        });
+        await axios.put(
+          `https://book-backend-4pyj.onrender.com/api/books/${id}`,
+          formData,
+          {
+            headers: {
+              "Content-Type": "multipart/form-data",
+            },
+          }
+        );
       } else {
-        await axios.post("/api/books", formData, {
-          headers: {
-            "Content-Type": "multipart/form-data",
-          },
-        });
+        await axios.post(
+          "https://book-backend-4pyj.onrender.com/api/books",
+          formData,
+          {
+            headers: {
+              "Content-Type": "multipart/form-data",
+            },
+          }
+        );
       }
 
       // Redirect to the homepage after successful submission

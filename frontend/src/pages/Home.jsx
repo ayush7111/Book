@@ -15,7 +15,7 @@ const Home = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("api/books", {
+        const response = await axios.get(  "https://book-backend-4pyj.onrender.com/api/books", {
           params: {
             page: currentPage,
             limit: ITEMS_PER_PAGE,
