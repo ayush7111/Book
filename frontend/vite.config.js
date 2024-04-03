@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      "/api": "https://book-backend-4pyj.onrender.com/",
+      "/api": "https://book-backend-4pyj.onrender.com",
     },
   },
 });
